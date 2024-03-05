@@ -18,8 +18,8 @@ class StockPickingBatch(models.Model):
             for product in record.move_line_ids:
                 record.product_weight = product.product_id.weight * product.quantity
                 record.product_volume = product.product_id.volume * product.quantity 
-        self.max_weight = self.product_weight / self.vehicle_category_id.max_weight if self.vehicle_category_id.max_weight != 0 else 1
-        self.max_volume = self.product_volume / self.vehicle_category_id.max_volume if self.vehicle_category_id.max_volume != 0 else 1
+            record.max_weight = record.product_weight / record.vehicle_category_id.max_weight if record.vehicle_category_id.max_weight != 0 else 1
+            record.max_volume = record.product_volume / record.vehicle_category_id.max_volume if record.vehicle_category_id.max_volume != 0 else 1
     
 
    

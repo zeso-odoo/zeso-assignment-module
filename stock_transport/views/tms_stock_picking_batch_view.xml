@@ -33,7 +33,7 @@
         <field name="name">tms.stock.picking.batch.view.gantt</field>
         <field name="model">stock.picking.batch</field>
         <field name="arch" type="xml">
-            <gantt date_start="scheduled_date" date_stop="scheduled_date" default_group_by="dock_id,vehicle_category_id" default_scale="week" color="vehicle_id">
+            <gantt color="id" date_start="scheduled_date" date_stop="scheduled_date" default_group_by="dock_id,vehicle_category_id" default_scale="week">
                 <field name="name" string="Name"/>
                 <field name="product_weight" string="weight"/>
                 <field name="product_volume" string="volume"/>
