@@ -10,7 +10,9 @@
     'data': [
         'views/tms_stock_transport_view.xml',
         'views/tms_stock_picking_batch_view.xml',
+        'views/stock_picking_view.xml',
     ],
     'installable': True,
+    'application':True,
     'license': 'LGPL-3',
 }
