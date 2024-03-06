@@ -5,7 +5,7 @@
         <field name="inherit_id" ref="stock.vpicktree"/>
         <field name="arch" type="xml">
             <xpath expr="//field[@name='location_dest_id']" position="after">
-                <field name="volume"/>
+                <field name="total_volume"/>
             </xpath>
         </field>
     </record>

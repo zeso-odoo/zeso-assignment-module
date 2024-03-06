@@ -4,10 +4,10 @@ class StockLineMove(models.Model):
     _name = 'stock.picking'
     _inherit = ['stock.picking']
 
-    volume = fields.Float('Volume',compute ="_compute_volume")
+    total_volume = fields.Float('Volume',compute ="_compute_total_volume")
 
-    @api.depends('volume')
-    def _compute_volume(self):
+    @api.depends('total_volume')
+    def _compute_total_volume(self):
         for record in self:
-            record.volume = record.product_id.volume
-    
+            record.total_volume = record.product_id.volume
+            

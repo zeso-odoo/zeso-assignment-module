@@ -25,7 +25,6 @@
             <graph string="Inventory Batch Graph" type="bar">
                 <field name="scheduled_date" type="row" interval="day"/>
                 <field name="vehicle_category_id" type="column"/>
-                <field name="id" type="measure" operator="count" string="Count"/>
             </graph>
         </field>
     </record>
@@ -33,7 +32,7 @@
         <field name="name">tms.stock.picking.batch.view.gantt</field>
         <field name="model">stock.picking.batch</field>
         <field name="arch" type="xml">
-            <gantt color="id" date_start="scheduled_date" date_stop="scheduled_date" default_group_by="dock_id,vehicle_category_id" default_scale="week">
+            <gantt  date_start="scheduled_date" date_stop="scheduled_date" default_group_by="dock_id,vehicle_id" default_scale="week">
                 <field name="name" string="Name"/>
                 <field name="product_weight" string="weight"/>
                 <field name="product_volume" string="volume"/>

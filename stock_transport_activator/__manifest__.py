@@ -3,9 +3,7 @@
     'version': '1.0',
     'summary': 'Dispatch management system',
     'depends':[
-        'base',
-        'fleet',
-        'stock_picking_batch',
+        'stock',
     ],
     'data': [
         'views/res_config_settings_view.xml',
